@@ -1,0 +1,211 @@
+.fullwidth{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.fullwidth .box button .fa{
+  font-size: 30px;
+}
+.asd_outer{
+	width: 720px;
+	overflow: hidden;
+	height: 360px;
+}
+.asd_strip{
+	transition: 1s;
+	width: 1440px;
+	height: 100%;	
+	white-space: nowrap;
+}
+.asd_strip_3{
+	transition: 1s;
+	width: 1440px;
+	height: 100%;	
+	white-space: nowrap;
+}
+.asd_strip_4{
+	transition: 1s;
+	width: 1440px;
+	height: 100%;	
+	white-space: nowrap;
+}
+.asd_card{
+	white-space: nowrap;
+	display: inline-block;
+	width: 200px;
+	height: 350px;
+	margin: 0 20px;
+}
+.single-product{
+	width: 100%;
+}
+.box{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.box button{
+	font-size: 20px;
+	font-weight: 900;
+	font-family: Century Gothic;
+	background: #000;
+	color: #fff;
+	width: 45px;
+	padding: 5px 10px 7px 10px;
+	transition: all 0.3s linear 0s;
+	text-align: center;
+}
+
+
+.page-content .row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.carosel-navigation .fullwidth .box button:hover {
+  background: #ffffff none repeat scroll 0 0;
+  color: #000;
+  border: #000 2px solid;
+}
+.small-product-area .carosel-navigation .fullwidth .asd_outer{ 
+    padding-top: 25px;
+    padding-right: 0px;
+	padding-left: 10px;
+    height: 1125px;
+    width: 890px;
+	overflow: hidden;
+}
+.small-product-area .carosel-navigation .fullwidth .asd_outer .asd_card { 
+	width: 250px;
+    height: 1100px;
+}
+.asd_strip_1 {
+	transition: 1s;
+	width: 1440px;
+	height: 100%;	
+	white-space: nowrap;
+}
+.brand-logo-area .fullwidth .asd_outer{ 
+    padding-right: 0px;
+    height: 165px;
+    width: 1000px;
+	padding-left: 40px;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+@media (min-width: 992px) and (max-width: 1192px){
+.brand-logo-area .fullwidth .asd_outer {
+    width: 780px;
+}
+}
+.brand-logo-area .fullwidth .asd_outer .asd_strip_2 .asd_card { 
+	width: 200px;
+    height: 150px;;
+}
+.asd_strip_2 {
+	transition: 1s;
+	width: 2000px;
+	height: 100%;	
+	white-space: nowrap;
+}
+@media (max-width: 767px){
+.brand-logo-area .fullwidth .asd_outer {
+    width: 280px;
+}
+}
+@media (max-width: 767px){
+	.product-area .fullwidth .asd_outer {
+		width: 236px;
+		height: 390px;
+	}
+}	
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-area .fullwidth .asd_outer {
+    width: 490px;
+	height: 380px;
+}
+.brand-logo-area .fullwidth .asd_outer {
+    width: 450px;
+	padding-left: 0px;
+}
+.product-button button {
+    height: 50px;
+}
+.product-button-2 {
+    height: 50px;
+}
+}
+@media (min-width: 991px) and (max-width: 1192px) {
+.product-area .fullwidth .asd_outer {
+    width: 490px;
+}
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+.small-product-area .carosel-navigation .fullwidth .asd_outer {
+    width: 590px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+.small-product-area .carosel-navigation .fullwidth .asd_outer {
+	width: 300px;
+	padding-left: 0px;
+}
+.small-product-area .carosel-navigation .fullwidth .asd_outer .asd_card {
+  padding-left: 15px;
+  width: 245px;
+}
+.product-area .single-product {
+	height: 320px;
+}  
+.product-area .button-group {
+	width: 195px;
+	 margin-bottom: 10px;
+}
+.product-button-2 a {
+    padding: 8px 20px 8px 20px;
+}
+.product-button button {
+    width: 180px;
+	margin-left: 7px;
+}
+}
+@media (min-width: 448px) and (max-width: 480px) {
+	.small-product-area .carosel-navigation .fullwidth .asd_outer {
+		width: 300px;
+		padding-left: 20px;
+}
+    .page-content .container {
+        width: 400px;
+}
+}
+@media (min-width: 380px) and (max-width: 447px) {
+	.small-product-area .carosel-navigation .fullwidth .asd_outer .asd_card {
+		width: 245px;
+	}
+	.small-product-area .carosel-navigation .fullwidth .asd_outer {
+		width: 260px;
+		padding-left: 0px;
+	}
+	.brand-logo-area .fullwidth .asd_outer {
+		padding-left: 0px;
+        width: 200px;
+	}
+	.brand-logo-area .fullwidth .asd_outer .asd_strip_2 .asd_card { 
+		width: 200px;
+		margin-right: 47px;
+		margin-left: 0;
+	}
+	.box {
+		width: 360px;
+	}
+	.brand-logo-area .fullwidth .box{
+		width: 95%;
+	}
+}
