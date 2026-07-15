@@ -47,9 +47,17 @@
                                     <!-- Мини-корзина (остается как есть, позже сделаем динамической) -->
                                 </li>
 
+
                                 <!-- Аутентификация -->
                                 @if (User.Identity.IsAuthenticated)
                                 {
+                                   
+                                        <!-- ИСТОРИЯ ЗАКАЗОВ (ДОБАВЛЕНА) -->
+                                        <li>
+                                            <a href="@Url.Action("History", "Order")">
+                                                <i class="fa fa-history"></i> История заказов
+                                            </a>
+                                        </li>
                                     <li><a href="/Account/Profile"><i class="fa fa-user"></i> @User.Identity.Name </a></li>
                                     <li>
                                         <form asp-action="Logout" asp-controller="Account" method="post" style="display:inline;">
