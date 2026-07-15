@@ -8,6 +8,7 @@ namespace KarisBrook
 {
     public class Program
     {
+        //Комментарий
         public static void Main(string[] args)
         {
             Console.WriteLine("=== Запуск приложения ===");
