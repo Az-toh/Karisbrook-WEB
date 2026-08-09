@@ -1,0 +1,18 @@
+﻿@model KarisBrook.Models.Product
+
+@{
+    ViewData["Title"] = "Удалить товар";
+    Layout = "_Layout";
+}
+
+<div class="container mt-4">
+    <h2>Удаление товара</h2>
+    <p>Вы уверены, что хотите удалить товар <strong>@Model.Name</strong>?</p>
+    <p><strong>Артикул:</strong> @ViewBag.Article</p>
+    <p><strong>Цена:</strong> @Model.Price ₽</p>
+
+    <form asp-action="DeleteConfirmed" asp-route-id="@Model.Id" method="post">
+        <input type="submit" value="Да, удалить" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>

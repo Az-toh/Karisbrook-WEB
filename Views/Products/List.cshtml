@@ -1,0 +1,74 @@
+﻿@model KarisBrook.Models.ProductsListViewModel
+
+@{
+    ViewData["Title"] = "Каталог товаров";
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Боковая панель с фильтрами -->
+        <div class="col-md-3">
+            <h4>Категории</h4>
+            <ul class="list-unstyled">
+                @foreach (var cat in Model.Categories)
+                {
+                    <li><a href="@Url.Action("List", new { category = cat.Slug })">@cat.Name</a></li>
+                }
+            </ul>
+
+            <h4>Бренды</h4>
+            <ul class="list-unstyled">
+                @foreach (var brand in Model.Brands)
+                {
+                    <li><a href="@Url.Action("List", new { brand = brand.Name })">@brand.Name</a></li>
+                }
+            </ul>
+        </div>
+
+        <!-- Список товаров -->
+        <div class="col-md-9">
+            <div class="row">
+                @foreach (var product in Model.Products)
+                {
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="@Url.Action("Details", new { id = product.Id })">
+                                    <img class="primary-img" src="@Url.Content(product.ImagePath)" alt="@product.Name" style="width:100%; height:auto; display:block;">
+                                </a>
+                            </div>
+                            <div class="product-description" style="padding: 10px 0 5px 0;">
+                                <h5><a href="@Url.Action("Details", new { id = product.Id })">@product.Name</a></h5>
+                                <div class="price-box" style="margin: 5px 0;">
+                                    @if (product.OldPrice.HasValue)
+                                    {
+                                        <span class="price">@product.Price ₽</span>
+                                        <span class="old-price">@product.OldPrice ₽</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="price">@product.Price ₽</span>
+                                    }
+                                </div>
+                                <span class="rating">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        if (i <= Math.Round(product.Rating))
+                                        {
+                                            <i class="fa fa-star"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="fa fa-star-o"></i>
+                                        }
+                                    }
+                                </span>
+                            </div>
+                            <!-- Убран блок product-action (кнопки и иконки) -->
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
